@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лингвистический код: A = БОГ = ЗНАНИЕ | 20 языков из 7170</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Sans+Serif:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Gothic&family=Noto+Sans+Ugaritic&family=Noto+Sans+Old+Italic&family=Noto+Sans+Egyptian+Hieroglyphs&family=Noto+Sans+Old+Turkic&family=Noto+Sans+Avestan&family=Noto+Sans+Cuneiform&family=Noto+Sans+Coptic&display=swap');
+/* ════════════════════════════════════════════════════════════
+   CSS-ПЕРЕМЕННЫЕ — ИМПЕРСКАЯ ПАЛИТРА
+   ════════════════════════════════════════════════════════════ */
+:root {
+    --bg-deep: #0a0a0c;
+    --bg-primary: #0e0e12;
+    --bg-card: #131318;
+    --bg-card-hover: #18181f;
+    --border-subtle: #1e1e26;
+    --border-accent: #2a2a36;
+    
+    --gold-bright: #d4af37;
+    --gold-main: #c9a227;
+    --gold-dim: #9a7b20;
+    --gold-glow: rgba(212, 175, 55, 0.15);
+    
+    --accent-warm: #c75b5b;
+    --accent-warm-dim: rgba(199, 91, 91, 0.15);
+    --accent-gold: #e8c84d;
+    
+    --text-primary: #e4e4e7;
+    --text-secondary: #a1a1aa;
+    --text-muted: #8b8b96;
+    
+    --tag-before-bg: rgba(100, 116, 180, 0.12);
+    --tag-before-text: #94a3b8;
+    --tag-after-bg: rgba(199, 140, 80, 0.15);
+    --tag-after-text: #d4a574;
+
+    --fonts-ancient: 'Noto Sans Gothic', 'Noto Sans Ugaritic', 'Noto Sans Old Italic', 'Noto Sans Egyptian Hieroglyphs', 'Noto Sans Old Turkic', 'Noto Sans Avestan', 'Noto Sans Cuneiform', 'Noto Sans Coptic';
+}
+
+/* ════════════════════════════════════════════════════════════
+   БАЗОВАЯ ТИПОГРАФИКА
+   ════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: 'Noto Sans Serif', 'Noto Sans', var(--fonts-ancient), -apple-system, BlinkMacSystemFont, serif;
+    line-height: 1.78;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* ════════════════════════════════════════════════════════════
+   ТИПОГРАФИЧЕСКИЕ КЛАССЫ
+   ════════════════════════════════════════════════════════════ */
+.serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+.text-gold { color: var(--gold-bright); }
+.text-accent { color: var(--accent-warm); }
+.text-muted { color: var(--text-muted); }
+.text-secondary { color: var(--text-secondary); }
+
+em { 
+    color: var(--gold-dim); 
+    font-style: italic;
+    font-weight: 500;
+}
+
+strong {
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+
+/* Неразрывные конструкции */
+.nobr { white-space: nowrap; }
+
+/* Длинное тире через CSS (для тех, кто не использует юникод) */
+.dash::after { content: '\2014'; } /* — */
+
+/* ════════════════════════════════════════════════════════════
+   АНИМАЦИИ (сдержанные, без мигания!)
+   ════════════════════════════════════════════════════════════ */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow-pulse {
+    0%, 100% {
+        box-shadow: 
+            0 0 20px var(--gold-glow),
+            inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+    50% {
+        box-shadow: 
+            0 0 30px rgba(212, 175, 55, 0.22),
+            inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+}
+
+/* ════════════════════════════════════════════════════════════
+   ШАПКА — ИМПЕРСКИЙ СТИЛЬ
+   ════════════════════════════════════════════════════════════ */
+.header {
+    position: relative;
+    background: linear-gradient(
+        180deg,
+        var(--bg-primary) 0%,
+        var(--bg-deep) 100%
+    );
+    border-bottom: 1px solid var(--gold-dim);
+    padding: 56px 24px 48px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Декоративные углы */
+.header::before,
+.header::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 1px solid var(--gold-dim);
+    opacity: 0.3;
+}
+
+.header::before {
+    top: 16px;
+    left: 16px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.header::after {
+    bottom: 16px;
+    right: 16px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Горизонтальная линия под заголовком */
+.header-line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 600px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--gold-dim) 30%,
+        var(--gold-bright) 50%,
+        var(--gold-dim) 70%,
+        transparent 100%
+    );
+}
+
+.main-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    color: var(--gold-bright);
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    /* Статичное свечение — без анимации! */
+    text-shadow: 
+        0 0 40px rgba(212, 175, 55, 0.25),
+        0 1px 2px rgba(0,0,0,0.8);
+}
+
+.formula-block {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.formula-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.2rem, 2.8vw, 1.7rem);
+    color: var(--accent-warm);
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    /* Статичный акцент — без мигания! */
+    border-bottom: 2px solid var(--accent-warm);
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.formula-display::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent-warm);
+    opacity: 0.3;
+}
+
+.formula-separator {
+    color: var(--gold-dim);
+    font-size: 1.4rem;
+    letter-spacing: 0.3em;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    letter-spacing: 0.14em;
+    max-width: 580px;
+    margin: 22px auto 0;
+    line-height: 1.7;
+}
+
+.subtitle-divider {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--gold-dim);
+    border-radius: 50%;
+    margin: 0 10px;
+    vertical-align: middle;
+    opacity: 0.6;
+}
+
+/* ════════════════════════════════════════════════════════════
+   ОСНОВНОЙ КОНТЕЙНЕР
+   ════════════════════════════════════════════════════════════ */
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 44px 28px 64px;
+}
+
+/* ════════════════════════════════════════════════════════════
+   БЛОК ЯЗЫКА — С УГЛОВЫМИ ДЕКОРАЦИЯМИ
+   ════════════════════════════════════════════════════════════ */
+.language-block {
+    position: relative;
+    background: linear-gradient(145deg, var(--bg-card) 0%, #101014 100%);
+    border: 1px solid var(--border-subtle);
+    border-radius: 2px;
+    margin-bottom: 32px;
+    padding: 32px 34px;
+    animation: fade-up 0.5s ease both;
+    transition: 
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.35s ease;
+    page-break-inside: avoid;
+}
+
+/* Угловые декорации карточек */
+.language-block::before,
+.language-block::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-color: var(--gold-dim);
+    border-style: solid;
+    border-width: 0;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.language-block::before {
+    top: -1px;
+    left: -1px;
+    border-top-width: 2px;
+    border-left-width: 2px;
+    border-radius: 2px 0 0 0;
+}
+
+.language-block::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    border-radius: 0 0 2px 0;
+}
+
+.language-block:hover {
+    border-color: var(--border-accent);
+    transform: translateX(4px);
+    box-shadow: 
+        -4px 0 0 var(--gold-dim),
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 0 60px var(--gold-glow);
+}
+
+.language-block:hover::before,
+.language-block:hover::after {
+    opacity: 1;
+}
+
+/* Заголовок блока языка */
+.language-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.lang-name {
+    font-family: 'Cormorant Garamond', Georgia, var(--fonts-ancient), serif;
+    font-size: 1.45rem;
+    color: var(--gold-bright);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.lang-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, var(--gold-bright) 0%, var(--gold-main) 100%);
+    color: var(--bg-deep);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 2px 12px rgba(212, 175, 55, 0.3);
+}
+
+.god-term {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-warm-dim);
+    padding: 5px 16px;
+    border-radius: 18px;
+    font-size: 0.84rem;
+    color: var(--accent-warm);
+    border: 1px solid rgba(199, 91, 91, 0.2);
+    letter-spacing: 0.03em;
+}
+
+.god-term::before {
+    content: '◆';
+    font-size: 0.65em;
+    opacity: 0.6;
+}
+
+/* ════════════════════════════════════════════════════════════
+   СЕКЦИЯ ПОСЛОВИЦЫ
+   ════════════════════════════════════════════════════════════ */
+.proverb-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-top: 22px;
+}
+
+.proverb-card {
+    background: var(--bg-primary);
+    padding: 20px 22px;
+    border-radius: 2px;
+    border: 1px solid var(--border-subtle);
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.proverb-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold-dim), transparent);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.proverb-card:hover {
+    border-color: var(--border-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.proverb-card:hover::before {
+    opacity: 1;
+}
+
+.card-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.card-label-symbol {
+    color: var(--gold-dim);
+    font-size: 0.85em;
+}
+
+.original-text {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+    line-height: 1.72;
+}
+
+[dir="rtl"] {
+    direction: rtl;
+    unicode-bidi: isolate;
+}
+
+.russian-text {
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.74;
+}
+
+/* ════════════════════════════════════════════════════════════
+   СЕКЦИЯ ТРАНСФОРМАЦИИ
+   ════════════════════════════════════════════════════════════ */
+.transform-section {
+    margin: 24px 0;
+    padding: 18px 24px;
+    background: linear-gradient(
+        90deg,
+        var(--accent-warm-dim) 0%,
+        transparent 100%
+    );
+    border-left: 3px solid var(--accent-warm);
+    border-radius: 0 3px 3px 0;
+    position: relative;
+}
+
+.transform-section::before {
+    content: '⟡';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--accent-warm);
+    opacity: 0.2;
+}
+
+.transform-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent-warm);
+    margin-bottom: 11px;
+    font-weight: 600;
+}
+
+.transform-label-icon {
+    font-size: 1.1em;
+}
+
+.transformed-text {
+    color: var(--accent-gold);
+    font-size: 1.03rem;
+    line-height: 1.73;
+    font-weight: 500;
+}
+
+.transformed-arrow {
+    color: var(--gold-bright);
+    margin-right: 6px;
+    font-weight: 700;
+}
+
+/* ════════════════════════════════════════════════════════════
+   СЕКЦИЯ АНАЛИЗА
+   ════════════════════════════════════════════════════════════ */
+.analysis-section {
+    margin-top: 22px;
+    background: linear-gradient(135deg, #16141a 0%, #0f0d12 100%);
+    padding: 22px 26px;
+    border-radius: 2px;
+    border-top: 2px solid var(--accent-warm);
+    position: relative;
+}
+
+.analysis-section::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--accent-warm),
+        transparent
+    );
+}
+
+.analysis-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent-warm);
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.analysis-icon {
+    font-size: 1.1em;
+    opacity: 0.7;
+}
+
+.analysis-content {
+    color: var(--text-secondary);
+    font-size: 0.93rem;
+    line-height: 1.82;
+}
+
+.meaning-tag {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 3px;
+    margin: 5px 3px;
+    font-size: 0.87rem;
+    line-height: 1.55;
+    font-weight: 500;
+}
+
+.meaning-before { 
+    background: var(--tag-before-bg); 
+    color: var(--tag-before-text); 
+}
+.meaning-after { 
+    background: var(--tag-after-bg); 
+    color: var(--tag-after-text); 
+}
+
+.analysis-conclusion {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--border-subtle);
+    color: var(--gold-dim);
+    font-size: 0.91rem;
+    font-style: italic;
+}
+
+/* ════════════════════════════════════════════════════════════
+   ФУТЕР
+   ════════════════════════════════════════════════════════════ */
+.footer {
+    position: relative;
+    text-align: center;
+    padding: 52px 24px 48px;
+    border-top: 1px solid var(--border-subtle);
+    margin-top: 48px;
+}
+
+.footer::before {
+    content: '❖';
+    display: block;
+    color: var(--gold-dim);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.4;
+}
+
+.footer-line {
+    margin: 9px 0;
+    color: var(--text-muted);
+    font-size: 0.83rem;
+    letter-spacing: 0.04em;
+}
+
+.footer-formula {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    color: var(--gold-bright);
+    margin-top: 24px;
+    letter-spacing: 0.18em;
+    opacity: 0.92;
+}
+
+.footer-humor {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-top: 14px;
+    font-size: 0.82rem;
+    opacity: 0.7;
+}
+
+/* ════════════════════════════════════════════════════════════
+   ADAPTIVNOST'
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 960px) {
+    .proverb-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .language-block {
+        padding: 24px 20px;
+    }
+    
+    .container {
+        padding: 32px 18px 48px;
+    }
+    
+    .header {
+        padding: 42px 18px 38px;
+    }
+    
+    .header::before,
+    .header::after {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 520px) {
+    .lang-name {
+        font-size: 1.2rem;
+    }
+    
+    .main-title {
+        letter-spacing: 0.08em;
+    }
+    
+    .formula-display {
+        letter-spacing: 0.12em;
+    }
+    
+    .subtitle-divider {
+        display: none;
+    }
+}
+
+/* ════════════════════════════════════════════════════════════
+   ПЕЧАТЬ
+   ════════════════════════════════════════════════════════════ */
+@media print {
+    @page {
+        margin: 2cm;
+        size: A4;
+    }
+    
+    body {
+        background: white !important;
+        color: #1a1a1a !important;
+        font-size: 10pt;
+        line-height: 1.6;
+    }
+    
+    .header,
+    .footer {
+        background: #f8f8f8 !important;
+        color: #333 !important;
+        border: 1px solid #ccc !important;
+        break-after: page;
+    }
+    
+    .header::before,
+    .header::after,
+    .footer::before {
+        display: none !important;
+    }
+    
+    .main-title {
+        color: #8B6914 !important;
+        text-shadow: none !important;
+        font-size: 18pt !important;
+    }
+    
+    .formula-display {
+        color: #8B0000 !important;
+        border-bottom: 1px solid #8B0000 !important;
+        font-size: 13pt !important;
+    }
+    
+    .language-block {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        border: 1px solid #ddd !important;
+        background: #fafafa !important;
+        margin-bottom: 20pt;
+        padding: 16pt;
+    }
+    
+    .proverb-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: white !important;
+        border: 1px solid #eee !important;
+    }
+    
+    .transform-section,
+    .analysis-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    a[href]::after {
+        content: '' !important;
+    }
+    
+    * {
+        text-shadow: none !important;
+        box-shadow: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =======================================================
+     ШАПКА
+     ======================================================= -->
+<header class="header">
+    <h1 class="main-title">Лингвистический код: A = B</h1>
+    
+    <div class="formula-block">
+        <span class="formula-display">A = БОГ</span>
+        <span class="formula-separator">·</span>
+        <span class="formula-display">B = ЗНАНИЕ</span>
+    </div>
+    
+    <p class="subtitle">
+        20 языков из 7170<span class="subtitle-divider"></span>20 неизвестных пословиц<span class="subtitle-divider"></span>трансформация смысла
+    </p>
+    
+    <div class="header-line" aria-hidden="true"></div>
+</header>
+
+
+<!-- =======================================================
+     ОСНОВНОЙ КОНТЕНТ
+     ======================================================= -->
+<main class="container">
+
+
+<!-- ==================== 01. ДРЕВНЕЕВРЕЙСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.04s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Древнееврейский (עברית קלסית)</h2>
+        <span class="lang-number" aria-label="Номер 01">01</span>
+        <span class="god-term">БОГ = Elohim / יהוה</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text" dir="rtl">«אֵלֹהִים צוֹפֵן בַּסִּתְרִים, וָאָדָם דּוֹרֵשׁ בַּחֲשִׁיפִים.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Элохим прячет в тайном, а человек ищет в явном» — о том, что Бог скрывает истину там, где мы даже не ищем.</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> скрыто в нетривиальном, а человек ищет в очевидном.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Теологический эзотеризм — Бог намеренно скрывает истину от непосвящённых.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Эпистемология научного открытия — истинное знание лежит в парадоксальном, контринтуитивном, а человеческий ум лениво ищет в привычном.</span>
+            <p class="analysis-conclusion">Суть сдвига: Из мистики — в методологию науки. Великие открытия (Коперник, Эйнштейн) всегда были «спрятаны в тайном» — они противили здравому смыслу!</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 02. САНСКРИТ ==================== -->
+<article class="language-block" style="animation-delay: 0.08s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Санскрит (संस्कृतम्)</h2>
+        <span class="lang-number" aria-label="Номер 02">02</span>
+        <span class="god-term">БОГ = ब्रह्मन् (Brahman)</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«ब्रह्म नीः सनातानं त्विष्यति, मनो जानाति कुतः प्रभवति॥»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Брахман вечно пуст и всё же существует; ум не понимает — откуда он проявляется».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> формально пусто (состоит из определений), но всё же имеет силу; мозг не понимает — откуда берётся понимание.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Адвайта-веданта — абсолют (брахман) за пределами категорий бытия и небытия.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Философия математики и логики — формальные системы «пусты» (аксиомы произвольны), но порождают неизбежные следствия; сознание не может объяснить собственную способность понимать.</span>
+            <p class="analysis-conclusion">Суть сдвига: Из индуистской мистики — в проблему основания математики (Гильберт, Гёдель)! Знание одновременно «пусто» (символы сами по себе ничего не значат) и всемогуще.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 03. ЛАТИНЬ ==================== -->
+<article class="language-block" style="animation-delay: 0.12s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Латынь (Lingua Latina)</h2>
+        <span class="lang-number" aria-label="Номер 03">03</span>
+        <span class="god-term">БОГ = Deus / Divus</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«Deus iners est in silentio sapientiae; homo clamat in vacuitate.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Бог бездеятелен в тишине мудрости; человек кричит в пустоте».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> безмолвно в глубине понимания; невежда шумит в пустоте.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Мистический quietism — Бог пребывает в апофатическом молчании, человеческий крик бессмыслен.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Психология эксперта против дилетанта — истинное знание молчаливо уверено (не нуждается в защите); незнание компенсирует громкость и агрессию.</span>
+            <p class="analysis-conclusion">Суть сдвига: Из религиозной практики — в наблюдение о человеческом поведении. Чем меньше человек знает — тем громче он утверждает. Знание же спокойно: оно доказано самому носителю.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 04. ДРЕВНЕРУССКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.16s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Древнерусский (Ѣзыкъ русскій)</h2>
+        <span class="lang-number" aria-label="Номер 04">04</span>
+        <span class="god-term">БОГ = Богъ / Господь</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«Богъ не въ силѣ, а въ правдѣ; хитрецъ не въ умѣ, а въ лукавствѣ.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Бог не в силе, а в правде; хитрец не в уме, а в лукавстве» — древняя поговорка о том, что божественное — это справедливость, а не мощь.</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> не в объёме фактов, а в точности; эрудиция не в глубине, а в показухе.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Русское православное богословие — Бог как этический абсолют (правда), а не как сила (что полемизирует с язычеством).</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Критерий демаркации науки — истинное знание в корректности метода, а не в количестве данных; псевдоучёность маскируется под глубину.</span>
+            <p class="analysis-conclusion">Суть сдвига: Из церковной этики — в философию науки (Поппер, Кун). Разница между учёным и шарлатаном не в «громкости», а в честности метода!</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 05. КОПТСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.2s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Коптский (ϯⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ)</h2>
+        <span class="lang-number" aria-label="Номер 05">05</span>
+        <span class="god-term">БОГ = Ⲡⲛⲟⲩϯ (Pnouiti)</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«Ⲡⲛⲟⲩϯ ⲉⲧϩⲟⲩ ϩⲙ̀ⲡⲉϫⲟⲉⲓⲥ, ⲛϯⲉⲓⲛⲁϥ ⲉⲃⲟⲗ ϩⲙ̀ⲡϫⲱⲟⲩⲧ.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Бог входит через узкую дверь сердца, выходит через широкую дверь уст».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> входит через узкое горлышко внимания, выходит через широкое горло болтовни.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Христианская мистика коптов — Бог требует аскетизма («узкая дверь»), но легко покидает того, кто слишком много говорит.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Когнитивная психология — обучение требует фокусированного внимания (узкий канал); потеря знания происходит через бесконечные разговоры (широкий канал).</span>
+            <p class="analysis-conclusion">Суть сдвига: Из монашеской практики — в теорию когнитивной нагрузки! Чтобы что-то узнать — нужен интенсивный фокус. Чтобы забыть — достаточно болтать.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 06. ГЕЭЗ ==================== -->
+<article class="language-block" style="animation-delay: 0.24s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Геэз (ግዕዝ)</h2>
+        <span class="lang-number" aria-label="Номер 06">06</span>
+        <span class="god-term">БОГ = እግዚአብሔር (Egziabher)</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«እግዚአብሔር የሚያየውን በጨለማ ያደርጋል፣ ሰው ግን የሚያየውን በብርሃን ያጣራል።»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«То, что Бог видит, Он обращает во тьму для человека; то, что человек видит, он выставляет на свет».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span>То, что открывает <strong>знание</strong>, остаётся скрытым от невежд; то, что видит невежда, он выставляет напоказ — но это пустое.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Эфиопское божественное сокровенное — Бог видит истину, но скрывает её от человека как испытание.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Эффект Даннинга-Крюгера — компетентный человек осознаёт границы своего знания (оно «скрыто» от демонстрации); некомпетентный переоценивает своё понимание и публично демонстрирует ошибочные взгляды.</span>
+            <p class="analysis-conclusion">Суть сдвига: Из религиозной теодицеи — в когнитивное искажение XX века! Истинное знание скромно; невежество — самоуверенно и громко.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 07. АРАМЕЙСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.28s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Арамейский (ܐܪܡܝܐ)</h2>
+        <span class="lang-number" aria-label="Номер 07">07</span>
+        <span class="god-term">БОГ = ܐܠܗܐ (Alaha)</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«ܐܠܗܐ ܒܡܕܒܪܐ ܕܡܢ ܠܡܬܒܣܪ، ܘܠܐ ܒܡܕܒܪܐ ܕܡܢ ܠܡܬܓܠܝ.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Бог в том пути, который ведёт к сохранению, а не в том, который ведёт к сокрытию».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> — в том методе, который сохраняет истину, а не в том, который её запутывает.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Семитская этика спасения — Бог ассоциирован с путём жизни (сохранения), а не с путём смерти или сокрытия.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Философия науки (бритва Оккама) — лучшее знание то, которое сохраняет объяснительную силу при минимальной сложности; плохие теории «скрывают» истину под лишними допущениями.</span>
+            <p class="analysis-conclusion">Суть сдвига: Из религиозной морали — в критерий простоты теории! Бритва Оккама: «Не следует множить сущее без необходимости».</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 08. ПАЛИ ==================== -->
+<article class="language-block" style="animation-delay: 0.32s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Пали (पाळि)</h2>
+        <span class="lang-number" aria-label="Номер 08">08</span>
+        <span class="god-term">БОГ = Brahmā / Devā</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«Brahmā pi jānāti yaṁ na sakkā paññāya okāssatum.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Даже Брахма не может выразить то, что не поддаётся мудрому осмыслению».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span>Даже <strong>совокупность всех знаний</strong> не может выразить то, что находится за пределами концептуализации.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Буддийский агностицизм — даже высшее божество (брахма) ограничено в познании нирваны или праджни.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Пределы формальных систем (теорема Гёделя) — любая достаточно сложная система знаний содержит утверждения, которые нельзя ни доказать, ни опровергнуть внутри этой системы.</span>
+            <p class="analysis-conclusion">Суть сдвига: Из буддийской метафизики — в математическую логику XX века! Гёдель (1931) доказал: существуют истины, которые недоказуемы. Это та же идея, что и у буддистов, — но в математике!</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 09. АВЕСТА ==================== -->
+<article class="language-block" style="animation-delay: 0.36s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Авеста (𐬀𐬬𐬆𐬯𐬙𐬀)</h2>
+        <span class="lang-number" aria-label="Номер 09">09</span>
+        <span class="god-term">БОГ = Ahura Mazda</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«Ahurəm mazō aṣ̌əm vīcīnaētā yō drujim nōit frāśjaiti.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Ахура-Мазда различает истину лишь тот, кто не вступил в союз с ложью».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> доступно лишь тому, кто не заключил компромисс с самообманом.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Зороастрийская дуалистическая этика — Бог (Ахура) на стороне Истины (Аша), но человек должен активно отвергать Ложь (Друдж).</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Когнитивная честность как предпосылка эпистемологии — невозможно обрести знание, если сознание защищает удобные заблуждения (когнитивные диссонансы, confirmation bias).</span>
+            <p class="analysis-conclusion">Суть сдвига: Из зороастрийской борьбы добра со злом — в психологию научного мышления! Главный враг знания — не внешнее зло, а внутренний самообман.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 10. ДРЕВНЕГРЕЧЕСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.4s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Древнегреческий (Ἑλληνικὴ γλῶσσα)</h2>
+        <span class="lang-number" aria-label="Номер 10">10</span>
+        <span class="god-term">БОГ = Θεός (Theos)</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«ὁ Θεὸς ἀεὶ γεωμετρεῖ· ὁ δὲ ἄνθρωπος ἀεὴ λογίζεται τὸ μὴ ὂν ὡς ὂν.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Бог всегда геометризирует; человек же всегда вычисляет небытие как бытие».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> всегда структурирует реальность; человеческое же мышление постоянно моделирует несуществующее как существующее.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Платоновско-пифагорейский теизм — Бог как геометр вселенной (порядок, гармония, число); человек же живёт иллюзиями.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Когнитивная наука и физика — знание выявляет математическую структуру реальности (квантовая механика, теория струн); человеческий мозг, однако, эволюционировал для выживания, не для истины — поэтому создаёт фиктивные конструкции (религия, идеологии, суеверия) и принимает их за реальность.</span>
+            <p class="analysis-conclusion">Суть сдвига: Из античной теологии — в эволюционную эпистемологию! Наш мозг — машина для выживания, не для истины. Знание — это борьба против собственной биологии.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 11. ШУМЕРСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.44s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Шумерский (𒅴𒂠 EME.GIR₁₅)</h2>
+        <span class="lang-number" aria-label="Номер 11">11</span>
+        <span class="god-term">БОГ = 𒀭𒀭 DINGIR / Anu</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«DINGIR-ra ka-nag gub-ba-aš, DINGIR-ra ka-šèg sig-ge-aš.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Принести воду богу — легко; принести сердце богу — трудно».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span>Заучить <strong>знание</strong> — легко; впустить знание в душу — трудно.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Месопотамский ритуализм — внешнее поклонение (вода, жертвы) доступно каждому; внутреннее посвящение требует настоящей трансформации.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Педагогическая психология — поверхностное обучение (зубрёжка, запоминание) легко и доступно; глубокое понимание (интериоризация, изменение картины мира) требует усилия и времени.</span>
+            <p class="analysis-conclusion">Суть сдвига: Из храмового культа — в теорию обучения (таксономия Блума)! Разница между «знать» (нижний уровень) и «синтезировать или оценивать» (верхние уровни) — колоссальна.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 12. ДРЕВНЕКИТАЙСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.48s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Древнекитайский (文言文)</h2>
+        <span class="lang-number" aria-label="Номер 12">12</span>
+        <span class="god-term">БОГ = 天 Tiān / 上帝 Shàngdì</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">「天不言而人信之，知者不語而愚者辯之。」</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Небо не говорит, но люди верят ему; мудрый молчит, а глупый спорит».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> не рекламирует себя, но ему подчиняются; невежество многословно, но пусто.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Даосско-конфуцианский имплицитный теизм — Небо (тянь) управляет миром без слов (у-вэй, недеяние); подлинная мудрость нема.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Социология научного авторитета — истинное знание не нуждается в пропаганде (оно работает: технологии, медицина, инженерия); псевдознание же требует постоянной рекламы, споров, агрессии.</span>
+            <p class="analysis-conclusion">Суть сдвига: Из восточной философии — в наблюдение о современной «постправде»! Почему сторонники плоской Земли, антивакцинаторы, эзотерики так громки? Потому что их «знание» слабо. Настоящее знание тихо: оно просто работает.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 13. ДРЕВНЕАРМЯНСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.52s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Древнеармянский (Գրաբար)</h2>
+        <span class="lang-number" aria-label="Номер 13">13</span>
+        <span class="god-term">БОГ = Աստված Astvats</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«Աստված ի բանից աշխարհ ասաց, իսկ մարդը՝ ի բանից խաբեութիւն շինեց.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Бог из слова создал мир, а человек из слова создал обман».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span>Из <strong>слова</strong> (термина, определения) рождается <em>понимание</em>; из того же слова — манипуляция.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Армянское христианство — Бог-Творец («Да будет свет!») творит Словом; человек же использует слово для лжи.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Лингвистическая философия и семиотика — один и тот же язык (слово) может порождать науку (точные определения) или пропаганду (искажение значений). Язык нейтрален: инструмент познания или инструмент обмана.</span>
+            <p class="analysis-conclusion">Суть сдвига: От теологии к Орвеллу («Politics and the English Language»)! «Политика — это облакивание языка, чтобы сделать убийство именем умерщвления». Слово создаёт миры — реальные или фиктивные.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 14. ДРЕВНЕТУРКСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.56s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Древнетюркский (𐰃𐰓𐰃𐰼𐰚𐰃 𐱅𐰇𐰼𐰰)</h2>
+        <span class="lang-number" aria-label="Номер 14">14</span>
+        <span class="god-term">БОГ = 𐰚𐰀𐰾 Tängri</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«Tängridä bolmış olurmıš, biligkä yorıγan erkan.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Что дано Тенгри — то свершается; кто идёт к мудрости — тот блуждает».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span>Что установлено <strong>законом природы</strong> — неизбежно; кто думает, что уже знает, — тот перестал учиться.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Тенгрианский фатализм — воля Неба (Тенгри) неотвратима; человеческие попытки «найти мудрость» тщетны перед судьбой.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Научный скептицизм и принцип фальсфицируемости — законы природы объективны (неизбежны); но исследователь, который считает, что «уже знает», теряет способность учиться (становится догматиком).</span>
+            <p class="analysis-conclusion">Суть сдвига: От религиозного фатализма к попперовскому фаллибилизму! «Я могу ошибаться» — начало любого настоящего поиска истины. Уверенность в своём знании — конец познания.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 15. ПРОТО-ИНДОЕВРОПЕЙСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.6s">
+
+    <header class="language-header">
+        <h2 class="lang-name">ПИЕ (реконструкция *dʰéǵʰōm)</h2>
+        <span class="lang-number" aria-label="Номер 15">15</span>
+        <span class="god-term">БОГ = *Dyēus ph₂tḗr</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал (реконструкция)
+            </div>
+            <p class="original-text">«*Dyēus ph₂tḗr weḱ-e tóm sūnum, h₃rǵʰ-yo-ti m'n̥s-és dʰéǵʰōm.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Дьеус-Отец видит всё солнце, но человек пашет землю вслепую».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Совокупное знание человечества</strong> освещает все проблемы, но отдельный человек действует в темноте ограниченного опыта.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Протоиндоевропейский космический теизм — Бог-Небо (пра-Юпитер, пра-Варуна) имеет всеведущий взор; человек — ничтожное земное существо, не видящее общей картины.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Проблема распределённого знания (Хайек) — всё человечество вместе обладает огромным знанием (наука, культура, технологии), но каждый индивид использует лишь крошечную часть и принимает решения в условиях радикальной неопределённости.</span>
+            <p class="analysis-conclusion">Суть сдвига: От примитивной теологии к экономике информации! Мы живём в мире, где «солнце» (совокупное знание) светит ярко, но каждый из нас «пашет вслепую» в своей узкой специальности. Парадокс информационного века!</p>
+        </div>
+    </section>
+
+</article>
+
+
+
+<!-- ==================== 16. ГОТСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.64s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Готский (𐌲𐌿𐍄𐌹𐍃𐌺𐌰)</h2>
+        <span class="lang-number" aria-label="Номер 16">16</span>
+        <span class="god-term">БОГ = 𐌲𐌿𐌸 Guþ</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«Guþ in riqizis saiiand; mans in liuhadai skaidand.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Бог сеет во тьме; человек на свету лишь разделяет собранное».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> вызревает во тьме — в паузах между усилиями; на свету человек лишь пожинает то, что зрело без него.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Готский мир Вульфилы (IV век): Бог тайно сеет истину во тьме, человеку остаётся жатва — провидение, а не поиск.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Эффект инкубации — Грэм Уоллес, «The Art of Thought» (1926): подготовка → инкубация → озарение → проверка; Анри Пуанкаре, «Математическое творчество» (1908): открытие фуксовых функций после отпущенной задачи; метаанализ Sio &amp; Ormerod (2009) подтверждает прирост решения после отвлечения.</span>
+            <p class="analysis-conclusion">Суть сдвига: от провидения — к когнитивной науке паузы! Знание прорастает там, куда сознание не светит; жатва — лишь момент сбора того, что зрело в темноте.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 17. ЭТРУССКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.68s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Этрусский (𐌓𐌀𐌔𐌄𐌍𐌍𐌀)</h2>
+        <span class="lang-number" aria-label="Номер 17">17</span>
+        <span class="god-term">БОГ = 𐌀𐌉𐌔 Ais / Tinia</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«Ais mulune; netsvis ipa turce.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Бог подал знак; гаруспик прочёл в нём то, что страшился найти».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> подаёт сигнал; человек прочёвывает в шуме собственный страх. Разница между данными и интерпретацией — место, где рождаются ложные боги.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Этрусская гаруспицина — бронзовая печень из Пьяченцы (ок. 100 г. до н.э.): сорок полей, на каждом имя божества; судьбу читали по печени жертвенной овцы.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Апофения — Клаус Конрад (1958): склонность видеть связи в шуме; ошибки I рода — Нейман и Пирсон (1933): ложная тревога, признание сигнала там, где его нет; «False-Positive Psychology» Симмонса, Нельсона и Симонсона (2011): p-hacking как лабораторная гаруспицина.</span>
+            <p class="analysis-conclusion">Суть сдвига: от гадания по печени — к статистической гигиене! Печень из Пьяченцы — первая карта случайности. Знание требует не читать в шуме своё, а заранее считать цену ложной тревоги.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 18. ДРЕВНЕЕГИПЕТСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.72s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Древнеегипетский (𓆎𓅓𓏏𓊖 Kemet)</h2>
+        <span class="lang-number" aria-label="Номер 18">18</span>
+        <span class="god-term">БОГ = 𓊹 nṯr</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«nṯr nb mꜣꜥt; ib nb ḫꜣt.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Бог — владыка истины; сердце — владыка того, что впереди».</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> — владыка свидетельства; желание — владыка толкования. Весы Маат взвешивают не сердце, а готовность признать неверный вес.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: «Книга Мёртвых», глава 125: сердце покойного взвешивают на весах против пера Маат; Тот записывает приговор. Истина — внешняя мера, данная богом.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Мотивированное рассуждение — Зива Кунда, «The Case for Motivated Reasoning» (Psychological Bulletin, 1990): человек — не судья свидетельств, а адвокат желаемого вывода; диссонанс — Фестингер (1957); мотивированная числительность — Кахан и др. (2013): счётные способности не спасают, люди точнее считают «выгодное».</span>
+            <p class="analysis-conclusion">Суть сдвига: от суда Маат — к суду над собой! Перо на весах — процедура, которой нельзя распоряжаться. Знание начинается там, где результат подсчёта дороже желаемого.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 19. УГАРИТСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.76s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Угаритский (𐎜𐎂𐎗𐎚 Ugarit)</h2>
+        <span class="lang-number" aria-label="Номер 19">19</span>
+        <span class="god-term">БОГ = 𐎛𐎍 Ilu</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«ḫlk l ibr ḥwṯ; mrgḫ l ṯb ṯr.»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Слово к камню — он делает; шёпот к груде — он исполняет» (слово Эла в цикле о Керете, KTU 1.14).</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> говорит формулой — и по формуле возводится здание. О дворце не молятся: аксиома — и дворец стоит.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: Угарит (Рас-Шамра, XIV–XII вв. до н.э.): Котар-ва-Хасис строит дворец Балу из серебра и золота; Эл творит словом — что скажет камню, то сбудется.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Аксиоматический метод — «Начала» Евклида (ок. 300 до н.э.): пять постулатов держат весь космос геометрии; «Основания геометрии» Гильберта (1899): аксиомы как точный фундамент; Бурбаки (с 1939): вся математика как здание из структур.</span>
+            <p class="analysis-conclusion">Суть сдвига: от теургии слова — к дедукции! Разница одна: у бога слово исполняет он сам, у знания слово обязана исполнить логика. Дворец стоит, пока стоит вывод.</p>
+        </div>
+    </section>
+
+</article>
+
+
+<!-- ==================== 20. ДРЕВНЕЯПОНСКИЙ ==================== -->
+<article class="language-block" style="animation-delay: 0.8s">
+
+    <header class="language-header">
+        <h2 class="lang-name">Древнеяпонский (上代日本語)</h2>
+        <span class="lang-number" aria-label="Номер 20">20</span>
+        <span class="god-term">БОГ = 神 kami</span>
+    </header>
+
+    <section class="proverb-section">
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◈</span>
+                Оригинал
+            </div>
+            <p class="original-text">«八百万の神、言霊にそありける»</p>
+        </div>
+        <div class="proverb-card">
+            <div class="card-label">
+                <span class="card-label-symbol">◉</span>
+                Перевод на русский
+            </div>
+            <p class="russian-text">«Восемь миллионов богов пребывают в духе слова» (кото­дама 言霊, «Манъёсю»).</p>
+        </div>
+    </section>
+
+    <aside class="transform-section">
+        <div class="transform-label">
+            <span class="transform-label-icon">⟡</span>
+            Трансформация: БОГ → ЗНАНИЕ
+        </div>
+        <p class="transformed-text"><span class="transformed-arrow">→</span><strong>Знание</strong> не называет каждую вещь — оно сжимает несчётное в один закон. Восемь миллионов имён даны не потому, что их много, а потому, что этот ряд не сжимается.</p>
+    </aside>
+
+    <section class="analysis-section">
+        <h3 class="analysis-title">
+            <span class="analysis-icon">◇</span>
+            Анализ смысловой трансформации
+        </h3>
+        <div class="analysis-content">
+            <span class="meaning-tag meaning-before">ДО: «Кодзики» (712) и «Манъёсю»: котодама 言霊 — дух слова; «земля восьми миллионов ками» — благословенное множество, которому не нужно числа.</span><br><br>
+            <span class="meaning-tag meaning-after">ПОСЛЕ: Колмогоровская сложность — Колмогоров (1965, «Три подхода к определению количества информации»), Соломонофф (1960–64), Чейтин (1966): сложность K(x) — длина кратчайшей программы, порождающей объект; несжимаемое = случайное.</span>
+            <p class="analysis-conclusion">Суть сдвига: от пантеона несчётного — к теории сложности описания! Где перечисление бесконечно, знание ищет не список, а генератор. Признать восемь миллионов — значит признать: не всё сжимается в формулу, и именно это — мера реального.</p>
+        </div>
+    </section>
+
+</article>
+
+
+</main>
+
+
+<!-- =======================================================
+     ФУТЕР
+     ======================================================= -->
+<footer class="footer">
+    <p class="footer-line">Лингвистический код · A = БОГ = ЗНАНИЕ · 20 языков из 7170</p>
+    <p class="footer-line">33 Богатыря = 33 буквы = 3 + 3 + 3 = 9 = НАНИЕ = ЗНАНИЕ</p>
+    <p class="footer-line">★ Источники: №4 — летописная речь Александра Невского; №10 — Плутарх, «Застольные беседы»; №12 — «Дао дэ цзин» §56 и «Лунь юй» XVII.19. Остальные пословицы — авторские реконструкции в жанре концептуальной паремиографии.</p>
+    <p class="footer-humor">«У Бога Знания великое чувство юмора»</p>
+    <div class="footer-formula">A = B · БОГ = ЗНАНИЕ</div>
+</footer>
+
+
+</body>
+</html>
