@@ -1,5 +1,10 @@
 # Linguistic Code
 
+<div align="center">
+  <img src="banner.png" width="100%" alt="Штандарт linguistic-code: обсидиан и расплавленное золото, кузня rtynbirf" />
+</div>
+
+
 > Самодостаточный интерактивный философский артефакт о языке, теле и опыте.
 > Один HTML-файл. Без серверов. Без трекинга. δ requires body.
 
