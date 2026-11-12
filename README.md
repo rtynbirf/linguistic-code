@@ -6,11 +6,12 @@
 
 <!--ФОРЖ:МУЗА:НАЧАЛО-->
 <div align="center">
-  <img src="repo-muse.svg" width="100%" alt="Муза linguistic-code: картина кузни ПОЛИМАТ, раунд 9" />
+  <img src="repo-muse.svg" width="100%" alt="Муза linguistic-code: мастерская СИНТАКС-ДРЕВО, кузня ПОЛИМАТ, раунд 11" />
   <br/>
-  <img src="forge-divider.svg" width="62%" alt="разделитель кузни ПОЛИМАТ" />
+  <img src="forge-divider.svg" width="62%" alt="делитель мастерской СИНТАКС-ДРЕВО" />
 </div>
 <!--ФОРЖ:МУЗА:КОНЕЦ-->
+
 
 
 
