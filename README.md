@@ -1,26 +1,38 @@
-# Linguistic Code
-
 <div align="center">
-  <img src="banner.png" width="100%" alt="Штандарт linguistic-code: обсидиан и расплавленное золото, кузня rtynbirf" />
+
+<a href="https://github.com/rtynbirf/linguistic-code"><img src="banner.png" width="100%" alt="linguistic-code — штандарт мастерской в каноне ORNAMENTAL MYTHO-REALISM"></a>
+
 </div>
 
 <!--ФОРЖ:МУЗА:НАЧАЛО-->
 <div align="center">
-  <img src="repo-muse.svg" width="100%" alt="Муза linguistic-code: мастерская СИНТАКС-ДРЕВО, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/linguistic-code@main/repo-muse.svg" width="100%" alt="Муза linguistic-code: мастерская СИНТАКС-ДРЕВО, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
   <br/>
-  <img src="forge-divider.svg" width="62%" alt="делитель мастерской СИНТАКС-ДРЕВО" />
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/linguistic-code@main/forge-divider.svg" width="62%" alt="делитель мастерской СИНТАКС-ДРЕВО" />
 </div>
 <!--ФОРЖ:МУЗА:КОНЕЦ-->
 
 <!--ФОРЖ:ПАСПОРТ:НАЧАЛО-->
 <div align="center">
-  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы linguistic-code: строение файлов, лексикон, числа — по фактическому контенту" />
+  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы linguistic-code №34 в каноне ORNAMENTAL MYTHO-REALISM: орнаментальная решётка, медальон-миф, строение файлов, лексикон — по фактическому контенту" />
 </div>
 
 | ФАЙЛОВ | ПАПОК | КОММИТОВ | ОБНОВЛЕНО | РЕЛИЗОВ |
 |---:|---:|---:|---|---:|
-| 22 | 5 | 15 | 2026-11-16 | 1 |
+| 33 | 8 | 1 | 2026-11-28 | 1 |
 <!--ФОРЖ:ПАСПОРТ:КОНЕЦ-->
+
+# Linguistic Code
+
+<p align="center"><img src="https://cdn.jsdelivr.net/gh/rtynbirf/linguistic-code@main/.github/social-preview.png" alt="linguistic-code" width="100%"></p>
+
+<div align="center">
+  <img src="banner.png" width="100%" alt="Штандарт linguistic-code: обсидиан и расплавленное золото, кузня rtynbirf" />
+</div>
+
+
+
+
 
 
 
