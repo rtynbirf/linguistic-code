@@ -22,6 +22,18 @@
 | 33 | 8 | 1 | 2026-11-28 | 1 |
 <!--ФОРЖ:ПАСПОРТ:КОНЕЦ-->
 
+# linguistic-code
+
+<div align="center">
+
+<a href="https://github.com/rtynbirf/linguistic-code"><img src="banner.png" width="100%" alt="linguistic-code — штандарт мастерской в каноне ORNAMENTAL MYTHO-REALISM"></a>
+
+</div>
+
+
+
+
+
 # Linguistic Code
 
 <p align="center"><img src="https://cdn.jsdelivr.net/gh/rtynbirf/linguistic-code@main/.github/social-preview.png" alt="linguistic-code" width="100%"></p>
